@@ -1,10 +1,9 @@
 package StepObjects;
 
 import PageObjects.DesktopsPage;
-import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
-import java.util.Iterator;
+import org.testng.Assert;
+
 
 public class DesktopsSteps extends DesktopsPage {
 
@@ -13,6 +12,14 @@ public class DesktopsSteps extends DesktopsPage {
         MP3PlayersOption.click();
         return this;
     }
+    @Step("Verify img title attribute")
+    public DesktopsSteps verifyTitleAttribute() {
+        IpodShuffleImg.scrollTo();
+        System.out.println(IpodShuffleImg.getAttribute("title"));
+        Assert.assertTrue(IpodShuffleImg.getAttribute("title").equals("iPod Shuffle"));
+        return this;
+    }
+
 
     @Step("Go through products list and go to product with name ipod touch")
     public DesktopsSteps goToIpodShuffle() {

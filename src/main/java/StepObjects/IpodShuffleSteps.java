@@ -6,7 +6,6 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 import PageObjects.Common;
 
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class IpodShuffleSteps extends IpodShufflePage {
 Common common = new Common();

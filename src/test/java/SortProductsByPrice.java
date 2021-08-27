@@ -23,7 +23,7 @@ public class SortProductsByPrice extends ChromeRunner {
 
         laptopsAndNotebooksSteps.clickSortBy()
                                 .sortByHigherToLower()
-                                .printCollection();
+                                .validateSorting();
     }
 
 }

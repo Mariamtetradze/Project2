@@ -59,13 +59,14 @@ public class OrderWithAccount extends ChromeRunner {
         IpodShuffleSteps ipodShuffleSteps = new IpodShuffleSteps();
 
         commonSteps.goToDesktops()
-                .goToAllDesktops();
+                    .goToAllDesktops();
 
         desktopsSteps.goToMP3Players()
-                .goToIpodShuffle();
+                    .verifyTitleAttribute()
+                    .goToIpodShuffle();
 
         ipodShuffleSteps.addItemToCart()
-                .checkShoppingCart();
+                    .checkShoppingCart();
     }
 
     @Test(dependsOnMethods = "addItemToCart", retryAnalyzer = Retry.class, groups = { "Regression2" }, description = "go to checkout, set billing details and validate total price")

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite" thread-count="2">
+
+    <test name="test">
+        <groups>
+            <run>
+                <include name="Regression1"></include>
+                <include name="Regression2"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="OrderWithAccount">
+            </class>
+            <class name="SortProductsByPrice">
+            </class>
+        </classes>
+
+    </test>
+</suite>

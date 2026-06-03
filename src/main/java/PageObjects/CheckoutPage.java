@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CheckoutPage {
     public SelenideElement
-    PaymentFirstName = $("#input-payment-firstname"),
+    PaymentFirstName = $("#input-payment-firstnames"),
     PaymentLastName = $("#input-payment-lastname"),
     PaymentAddress = $("#input-payment-address-1"),
     PaymentCity = $("#input-payment-city"),
